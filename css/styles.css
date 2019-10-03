@@ -1,0 +1,268 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html,
+body,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #25ae88;
+}
+
+ul,
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.no--select {
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+h3 {
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	font-weight: 500;
+}
+
+/* MAIN styles */
+
+body {
+	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	scroll-behavior: smooth;
+}
+
+.app-layout {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 56px;
+	top: 0;
+	background-color: #25ae88;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+	display: flex;
+	overflow: hidden;
+	z-index: 1;
+	color: #fff;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: background-color 250ms linear;
+}
+
+.app__offline {
+	background-color: #25ae88;
+}
+
+.header__icon {
+	width: 48px;
+	height: 48px;
+	margin: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.header__icon:active {
+	opacity: 0.8;
+	outline: 1px solid #fff;
+}
+
+.header__title {
+	color: #fff;
+	font-size: 20px;
+	-ms-grid-row-align: center;
+	align-self: center;
+	margin-left: 10px;
+}
+
+.menu {
+	width: 280px;
+	height: 100%;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+	z-index: 1;
+	transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+	transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+	transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1), -webkit-transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+	-webkit-transform: translateX(-110%);
+	transform: translateX(-110%);
+	will-change: transform;
+	z-index: 2;
+}
+
+.menu--show {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.menu__overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.3);
+	transition: opacity 0.15s cubic-bezier(0, 0, 0.3, 1);
+	visibility: hidden;
+	opacity: 0;
+	z-index: 1;
+}
+
+.menu__overlay--show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.menu__header {
+	height: 150px;
+	background: #25ae88;
+	color: #fff;
+	border-bottom: 1px solid #ddd;
+}
+
+.menu__list {
+	width: inherit;
+	height: inherit;
+	overflow: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	background-color: #f5f5f6;
+}
+
+.menu__list li {
+	border: 0;
+	padding: 0;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.menu__list li a {
+	padding: 20px;
+	color: rgba(0, 0, 0, 0.87);
+	cursor: pointer;
+	display: block;
+}
+
+.menu__list li a:active,
+.menu__list li a:hover {
+	background: #e7e7e7;
+}
+
+.todo-app{
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+	font-family: arial;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+@media (min-width: 500px){
+	.todo-app{
+		padding: 0;
+	}
+}
+
+.todo-form{
+	position: relative;
+}
+
+.todo-input{
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.todo-list{
+	perspective: 10000px;
+}
+
+.todo-submit{
+	position: absolute;
+	right: 5px;
+	z-index: 100;
+	top: 5px;
+	border: 0;
+	border-radius: 4px;
+	padding: 9px;
+	background: #eaeaea;
+	font-size: 1em;
+}
+
+.todo-element{
+	width: 100%;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	background: #f8f8f8;
+	border: 1px solid #ccc;
+	border-left: 4px solid #b8d9e1;
+	padding: 20px;
+	height: 100%;
+}
+
+.todo-element-wrapper{
+	max-height: 0px;
+	overflow: hidden;
+	transition: all .3s;
+}
+
+
+.fadein{
+	max-height: 61px;
+}
+
+.fadeout{
+	max-height: 0px;
+}
+
+.todo-delete{
+	float: right;
+	cursor: pointer;
+	font-style: normal;
+	font-size: .9em;
+	font-weight: bold;
+	text-align: center;
+	transition: font-size .3s;
+}
+
+.todo-delete:hover{
+	font-size: 1.2em;
+}
+
+.fadeout{
+	-webkit-animation: fadeout .5s ease forwards;
+}
+
+
