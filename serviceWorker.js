@@ -8,17 +8,11 @@ var files = [
   'https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700', 
   './css/styles.css',
   './images/icons/android-chrome-192x192.png',
-  './images/push-on.png',
-  './images/push-off.png',
   './images/icons/favicon-16x16.png',
   './images/icons/favicon-32x32.png',
   './js/main.js',
   './js/app.js',
   './js/offline.js',
-  './js/push.js',
-  './js/sync.js',
-  './js/toast.js',
-  './js/share.js',
   './js/menu.js',
   './manifest.json'
 ];
@@ -41,32 +35,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-self.addEventListener('fetch', (event) => {
-  console.info('Event: Fetch');
-
-  var request = event.request;
-
-  event.respondWith(
-    caches.match(request).then((response) => {
-      if (response) {
-        return response;
-      }
-
-      return fetch(request).then((response) => {
-        var responseToCache = response.clone();
-        caches.open(cacheName).then((cache) => {
-            cache.put(request, responseToCache).catch((err) => {
-              console.warn(request.url + ': ' + err.message);
-            });
-          });
-
-        return response;
-      });
-    })
-  );
-});
-
-self.addEventListener('activate', (event) => {
+ self.addEventListener('activate', (event) => {
   console.info('Event: Activate');
 
   event.waitUntil(
