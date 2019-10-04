@@ -2,17 +2,16 @@
 
 TODO List é uma Aplicação Web Progressiva onde os usuários podem adicionar tarefas a serem cumpridas, e ao finaliza las as mesmas podem ser removidas.
 
-![N|Solid](images\android.jpeg)
-![N|Solid](images\ios.jpeg)
+<img src="images/android.jpeg" width="300" > <img src="images/ios.jpeg" width="355" >
+
 
 ## Manifesto
 
 Para a instalação da aplicação nas plataformas mobile Android e iOS acesse os respectivos links.
 
-```python
-Android: <https://drive.google.com/open?id=19oh4e3I8dmXvxMiiXLWSRXvTvtkHRHPj>
-iOS: <https://drive.google.com/open?id=1tASOLe5Trq_yvGmFjj-UJbNgKbyHVx7Q>
-```
+
+- Android: https://drive.google.com/open?id=19oh4e3I8dmXvxMiiXLWSRXvTvtkHRHPj
+- iOS: https://drive.google.com/open?id=1tASOLe5Trq_yvGmFjj-UJbNgKbyHVx7Q
 
 ## Documentação
 
