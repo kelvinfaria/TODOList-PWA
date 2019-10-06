@@ -10,8 +10,8 @@ TODO List é uma Aplicação Web Progressiva onde os usuários podem adicionar t
 Para a instalação da aplicação nas plataformas mobile Android e iOS acesse os respectivos links.
 
 
-- Android: https://drive.google.com/open?id=19oh4e3I8dmXvxMiiXLWSRXvTvtkHRHPj
-- iOS: https://drive.google.com/open?id=1tASOLe5Trq_yvGmFjj-UJbNgKbyHVx7Q
+- Android: https://drive.google.com/open?id=1kUurS4wzWKgj977w2bQs5AC4Yh9UvCsJ
+- iOS: https://drive.google.com/open?id=1_LYKOczaKeqzADyqvtLAcQgeRjOcbp4d
 
 ## Documentação
 
